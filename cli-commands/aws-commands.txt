@@ -1,0 +1,14 @@
+# Check EC2 metadata
+curl http://169.254.169.254/latest/meta-data/
+
+# List S3 buckets to validate IAM role access
+aws s3 ls
+
+# Upload a file to S3
+aws s3 cp testfile.txt s3://your-bucket-name/
+
+# Download from S3
+aws s3 cp s3://your-bucket-name/testfile.txt .
+
+# Check instance public and private IPs
+aws ec2 describe-instances --instance-ids i-xxxxxxxxxxxxxxxxx --query 'Reservations[*].Instances[*].[PublicIpAddress,PrivateIpAddress]'
