@@ -16,3 +16,8 @@
   - Private and public IPs
   - NAT and Internet Gateway
   - DNS resolution
+
+
+## 📊 Network Architecture
+
+![Network Architecture Diagram](diagrams/network-architecture.png)
